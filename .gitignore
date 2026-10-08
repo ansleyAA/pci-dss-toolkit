@@ -1,0 +1,48 @@
+# ===========================================================================
+# .gitignore - keeps SECRETS and REAL NETWORK DATA out of the repository.
+# Review carefully before committing. When in doubt, add it here.
+# ===========================================================================
+
+# --- Secrets / credentials ---
+.env
+*.env
+!.env.example
+
+# --- Real inventory (contains real hostnames/IPs). Commit only the example. ---
+rack_inventory.yaml
+!rack_inventory.example.yaml
+
+# --- Generated output: contains REAL device data (hostnames, IPs, MACs) ---
+rack_output/
+discovery_output/
+switchport_output/
+portnox_output/
+
+# --- The central MAC -> device database (real MACs/IPs from the network) ---
+mac_device_reference.csv
+
+# --- Session logs (contain real device IPs / interaction) ---
+session_*.log
+*.log
+
+# --- Portnox / NAC exports (real endpoint data) ---
+devices.csv
+*devices*.csv
+
+# --- draw.io temp files ---
+*.dtmp
+.$*
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

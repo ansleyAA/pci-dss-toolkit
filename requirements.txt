@@ -1,0 +1,16 @@
+# Core network automation
+netmiko==4.7.0
+paramiko==3.5.1
+ntc-templates==7.9.0
+
+# Inventory / config parsing
+PyYAML==6.0.3
+
+# Secrets handling
+python-dotenv==1.0.1
+
+# Diagram generation
+matplotlib==3.11.2
+
+# Offline MAC OUI -> vendor lookup
+mac-vendor-lookup==0.1.15

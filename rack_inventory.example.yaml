@@ -1,0 +1,29 @@
+# ===========================================================================
+# EXAMPLE rack inventory. Copy to rack_inventory.yaml and edit for your sites.
+# The real rack_inventory.yaml is git-ignored (it contains real hostnames/IPs).
+#
+# Hosts/names live HERE; enable secrets live in .env (referenced by secret_env).
+# Naming convention: switch 'SW-SITE-01' -> .env variable 'SECRET_SW_SITE_01'.
+#
+# TO ADD A DEVICE: add a block under its rack group, then add the matching
+# SECRET_ line in .env.
+# ===========================================================================
+
+racks:
+
+  ExampleSite-RackA:
+    - name: SW-SITE-01
+      host: 10.0.0.11
+      device_type: cisco_ios
+      secret_env: SECRET_SW_SITE_01
+
+    - name: SW-SITE-02
+      host: 10.0.0.12
+      device_type: cisco_ios
+      secret_env: SECRET_SW_SITE_02
+
+  # ExampleSite-RackB:
+  #   - name: RTR-SITE-01
+  #     host: 10.0.1.1
+  #     device_type: cisco_ios
+  #     secret_env: SECRET_RTR_SITE_01
