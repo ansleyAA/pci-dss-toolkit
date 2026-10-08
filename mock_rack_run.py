@@ -6,7 +6,7 @@ spec = importlib.util.spec_from_file_location("rc", pathlib.Path("rack_consolida
 rc = importlib.util.module_from_spec(spec); spec.loader.exec_module(rc)
 
 sw1 = {
-    "name": "SW_ICT_01", "host": "172.29.20.2", "error": None,
+    "name": "SW_ICT_01", "host": "10.0.0.1", "error": None,
     "version": [{"hostname": "SW_ICT_01", "hardware": "WS-C3850-48P", "version": "16.9.4"}],
     "status": [
         {"port": "Gi1/0/1", "vlan": "10", "status": "connected", "name": "Teller-PC1"},
@@ -40,7 +40,7 @@ sw1 = {
     "ipbrief": [{"interface": "GigabitEthernet1/0/5", "status": "administratively down"}],
 }
 sw2 = {
-    "name": "SW_ICT_02", "host": "172.29.20.4", "error": None,
+    "name": "SW_ICT_02", "host": "10.0.0.2", "error": None,
     "version": [{"hostname": "SW_ICT_02", "hardware": "WS-C2960X-48", "version": "15.2(7)"}],
     "status": [
         {"port": "Gi1/0/1", "vlan": "10", "status": "connected", "name": "Server-1"},
